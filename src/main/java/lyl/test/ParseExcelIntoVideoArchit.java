@@ -18,6 +18,10 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import com.google.gson.Gson;
 
+/**
+ * @author loong
+ *
+ */
 public class ParseExcelIntoVideoArchit {
 	
 	public static void main(String[] args) {

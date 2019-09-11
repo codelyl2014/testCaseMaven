@@ -6,7 +6,7 @@ package lyl.test.sqlServer;
 import lyl.test.BookInfoVo;
 
 /**
- * @author ASUS
+ * @author loong
  *
  */
 public class DateTest {

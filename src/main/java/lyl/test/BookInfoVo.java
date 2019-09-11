@@ -1,5 +1,10 @@
 package lyl.test;
 
+/**
+ * @author loong
+ *
+ */
+
 public class BookInfoVo {
 
     // 唯一标识码

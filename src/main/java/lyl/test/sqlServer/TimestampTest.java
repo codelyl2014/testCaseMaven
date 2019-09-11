@@ -7,7 +7,7 @@ import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 
 /**
- * @author ASUS
+ * @author loong
  *
  */
 public class TimestampTest {

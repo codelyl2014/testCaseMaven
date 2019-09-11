@@ -14,7 +14,10 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import lyl.test.sqlServer.SqlServerTest;
 
-
+/**
+ * @author loong
+ *
+ */
 public class ParseExcel {
 	
 	public static void main(String[] args) {

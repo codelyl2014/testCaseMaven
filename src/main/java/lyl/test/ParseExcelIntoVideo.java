@@ -21,6 +21,10 @@ import org.apache.poi.xwpf.converter.core.utils.StringUtils;
 
 import com.google.gson.Gson;
 
+/**
+ * @author loong
+ *
+ */
 public class ParseExcelIntoVideo {
 
 	public static void main(String[] args) {

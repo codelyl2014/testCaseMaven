@@ -11,7 +11,7 @@ import java.sql.SQLException;
 import lyl.test.BookInfoVo;
 
 /**
- * @author ASUS
+ * @author loong
  *
  */
 public class SqlServerTest {

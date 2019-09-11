@@ -1,5 +1,8 @@
 package lyl.test;
-
+/**
+ * @author loong
+ *
+ */
 public class VideoInfoVo {
 	
 	// 视频主标题

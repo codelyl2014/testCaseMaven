@@ -8,7 +8,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.google.gson.Gson;
-
+/**
+ * @author loong
+ *
+ */
 public class ReadTxtFile {
 	 public static String readTxt(String filePath) {
 	        List<String> list = new ArrayList<>();
