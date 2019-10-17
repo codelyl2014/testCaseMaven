@@ -19,6 +19,7 @@ public class Proxy {
 		method = clazz.getDeclaredMethod("test1",new Class[] {String.class});
 		method.setAccessible(true);
 		method.invoke(new DynamicProxy(), "test1");
+		System.out.println("---------------------------");
 		Method[] methods = clazz.getMethods();
 		for(Method method2:methods) {
 			System.out.println(method2.getName());
@@ -26,9 +27,10 @@ public class Proxy {
 		System.out.println("---------------------------");
 		Method[] methods2 = clazz.getDeclaredMethods();
 		for(Method method2:methods2) {
-			System.out.println(method2.getName());
-			
+			System.out.println(method2.getName());			
 		}
+		System.out.println("---------------------------");
+		
 	}
 
 }

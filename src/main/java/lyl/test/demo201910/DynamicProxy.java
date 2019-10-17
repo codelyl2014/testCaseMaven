@@ -91,8 +91,9 @@ public class DynamicProxy {
 //		proxy1.doSomething();
 //		proxy1.someThingElse("joney");
 		consumer(proxy1);
-		
-		
+		System.out.println("---------------------------");
+		Class<?> class1 = handler.getClass();
+		System.out.println(class1.getName());
 	}
 
 }

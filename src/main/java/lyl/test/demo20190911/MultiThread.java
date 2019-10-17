@@ -20,35 +20,7 @@ public class MultiThread {
 	public static ExecutorService executorService = Executors.newCachedThreadPool();
 	
 	public static void main(String[] args) {
-		Executors.newSingleThreadExecutor().execute(()->{
-			for(int i = 1; i < 1000 ; i+=2) {
-				lock.lock();
-				try {
-					two.signal();
-					System.out.println("当前：" + i);
-					one.await();
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}
-				lock.unlock();
-			}
-		});
-		
-		Executors.newSingleThreadExecutor().execute(()->{
-			for(int i = 1; i <= 1000 ; i+=2) {
-				lock.lock();
-				try {
-					one.signal();
-					System.out.println("当前：" + i);
-					two.await();
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}
-				lock.unlock();
-			}
-		});
-		
-//		Thread thread1 = new Thread(()->{
+//		Executors.newSingleThreadExecutor().execute(()->{
 //			for(int i = 1; i < 1000 ; i+=2) {
 //				lock.lock();
 //				try {
@@ -56,29 +28,57 @@ public class MultiThread {
 //					System.out.println("当前：" + i);
 //					one.await();
 //				} catch (InterruptedException e) {
-//					
+//					e.printStackTrace();
 //				}
 //				lock.unlock();
 //			}
-//		}) ;
+//		});
 //		
-//		Thread thread2 = new Thread(()->{
-//			for(int i = 2; i <= 1000 ; i+=2) {
+//		Executors.newSingleThreadExecutor().execute(()->{
+//			for(int i = 1; i <= 1000 ; i+=2) {
 //				lock.lock();
 //				try {
 //					one.signal();
 //					System.out.println("当前：" + i);
 //					two.await();
 //				} catch (InterruptedException e) {
-//					
+//					e.printStackTrace();
 //				}
 //				lock.unlock();
 //			}
-//		}) ;
-//		
-//		thread1.setPriority(Thread.MAX_PRIORITY);
-//		thread1.start();
-//		thread2.start();
+//		});
+		
+		Thread thread1 = new Thread(()->{
+			for(int i = 1; i < 1000 ; i+=2) {
+				lock.lock();
+				try {
+					two.signal();
+					System.out.println("当前：" + i);
+					one.await();
+				} catch (InterruptedException e) {
+					
+				}
+				lock.unlock();
+			}
+		}) ;
+		
+		Thread thread2 = new Thread(()->{
+			for(int i = 2; i <= 1000 ; i+=2) {
+				lock.lock();
+				try {
+					one.signal();
+					System.out.println("当前：" + i);
+					two.await();
+				} catch (InterruptedException e) {
+					
+				}
+				lock.unlock();
+			}
+		}) ;
+		
+		thread1.setPriority(Thread.MAX_PRIORITY);
+		thread1.start();
+		thread2.start();
 	}
 
 }
