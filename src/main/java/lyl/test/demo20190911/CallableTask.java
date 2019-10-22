@@ -43,13 +43,15 @@ public class CallableTask {
 			}
 		};
 		
+		System.gc();
 		ExecutorService executor = Executors.newSingleThreadExecutor();
 		
 		Future<String> future = executor.submit(myCallable);
 		while (future.isDone()) {
 			System.out.println(future.get());
 			
-		}				
+		}		
+
 		
 	}
 

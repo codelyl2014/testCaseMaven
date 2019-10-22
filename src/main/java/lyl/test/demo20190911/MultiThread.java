@@ -19,7 +19,7 @@ public class MultiThread {
 	
 	public static ExecutorService executorService = Executors.newCachedThreadPool();
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 //		Executors.newSingleThreadExecutor().execute(()->{
 //			for(int i = 1; i < 1000 ; i+=2) {
 //				lock.lock();
